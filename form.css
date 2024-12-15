@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Airfool'; /* Задаем имя шрифта */
+    src: url('/Airfool.otf') format('opentype'); /* Указываем путь к шрифту */
+    font-weight: normal; /* Можно задать начертание, если нужно */
+    font-style: normal; /* Можно задать стиль, если нужно */
+  }
+  
+
+body {
+    font-family: "AirFool";
+    background-color: #f1e8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-header {
+    background-color: #4a90e2;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    padding: 20px;
+    text-align: center;
+}
+
+.form-header h2 {
+    font-family: "AirFool";
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+}
+
+.form-body {
+    padding: 20px;
+}
+
+#application-form input,
+#application-form textarea {
+    font-family: "AirFool";
+    font-size: 14px;
+    color: #aaa;
+    background-color: #f9f9f9;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#application-form input::placeholder,
+#application-form textarea::placeholder {
+    color: #d3d3d3;
+}
+
+#application-form textarea {
+    resize: none;
+    height: 100px;
+}
+
+#application-form button {
+    font-family: "AirFool";
+    font-size: 16px;
+    color: #fff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#application-form button:hover {
+    background-color: #357ab8;
+}

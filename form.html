@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма заявки</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Подключаем jQuery -->
+</head>
+<body>
+    <div class="form-container">
+        <!-- Верхний блок -->
+        <div class="form-header">
+            <h2>Оставьте онлайн-заявку в детский сад "Акварелька"</h2>
+        </div>
+        <!-- Нижний блок -->
+        <div class="form-body">
+            <form id="application-form" action="/submit" method="POST">
+                <input type="text" id="name" name="name" placeholder="Имя" required>
+                <input type="tel" id="phone" name="phone" placeholder="Номер мобильного телефона" required>
+                <textarea id="message" name="message" placeholder="Введите текст заявки" rows="4"></textarea>
+                <button class="btn-orange" type="submit">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Отправка формы с использованием AJAX
+            $('#application-form').submit(function(event) {
+                event.preventDefault(); // Предотвращаем стандартное поведение формы (перезагрузка страницы)
+
+                // Собираем данные формы
+                const formData = {
+                    name: $('#name').val(),
+                    phone: $('#phone').val(),
+                    message: $('#message').val()
+                };
+
+                // Отправка данных формы на сервер
+                $.ajax({
+                    type: 'POST',
+                    url: '/submit',
+                    data: formData,
+                    success: function(response) {
+                        alert('Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.');
+                    },
+                    error: function() {
+                        alert('Произошла ошибка при отправке заявки.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

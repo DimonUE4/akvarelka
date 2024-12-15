@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея детского сада</title>
+    <link rel="stylesheet" href="Gallery.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo"> 
+            <img src="photo_2024-11-21_19-27-51.png" alt="Логотип">
+        </div>
+        <nav class="navbar">
+            <a href="#" class="nav-link" data-page="index.html">Главная</a>
+            <a href="#" class="nav-link" data-page="Reviews.html">Отзывы</a>
+            <a href="#" class="nav-link" data-page="Gallery.html" style="color: #126ffa;">Галерея</a>
+            <a href="#" class="nav-link" data-page="News.html" >Новости</a>
+        </nav>
+        <div class="contact">
+            <a href="tel:+73332221100">+7 (333) 222-11-00</a>
+            <button class="btn-orange" onclick="redirectToForm()">Заказать звонок</button>
+        </div>
+    </header>
+
+    
+
+    <!-- Галерея -->
+    <section class="gallery">
+        <div class="ourgallery">Наша галерея моментов</div>
+        <div class="gallery-container">
+            <!-- Верхняя часть галереи -->
+            <div class="gallery-top">
+                <div class="gallery-left">
+                    <div class="block block1"></div>
+                    <div class="block block2"></div>
+                </div>
+                <div class="gallery-right">
+                    <div class="gallery-right-top">
+                        <div class="block block3"></div>
+                        <div class="block block4"></div>
+                    </div>
+                    <div class="block block5"></div>
+                </div>
+            </div>
+            <!-- Нижняя часть галереи -->
+            <div class="gallery-bottom">
+                <div class="block block6"></div>
+                <div class="block block7"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo"> 
+                <img src="photo_2024-11-21_19-27-51.png" alt="Логотип">
+            </div>
+            <nav class="footer-nav">
+              <a class="nav-link" data-page="index.html">Главная</a>
+              <a  class="nav-link" data-page="Reviews.html">Отзывы</a>
+              <a  class="nav-link" data-page="Gallery.html" >Галерея</a>
+              <a  class="nav-link" data-page="News.html" style="color: #126ffa;" >Новости</a>
+          </nav>
+          </div>
+          <div class="addresses">
+            <p>Сад №1 – ЖК "Восточный"<br>ул. Новороссийская, 1</p>
+            <p>Сад №2 – ЖК "Лесная поляна"<br>ул.Объездная, 3</p>
+            <p>Сад №3 – ЖК "Солнечный"<br>ул. Восточная, 13а</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
